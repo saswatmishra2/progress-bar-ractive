@@ -1,0 +1,50 @@
+{
+  "name": "progressbar",
+  "version": "0.1.1",
+  "description": "Progressbar with gulp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saswatmishra2/progress-bar-ractive"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim",
+      "ractivate"
+    ]
+  },
+  "browserify-shim": {
+    "plugin": {
+      "exports": "plugin",
+      "depends": [
+        "jquery:$"
+      ]
+    }
+  },
+  "aliasify": {
+    "aliases": {
+      "ractive": "ractive/build/ractive.runtime"
+    }
+  },
+  "devDependencies": {
+    "aliasify": "^1.4.0",
+    "browser-sync": "~2.12.3",
+    "browserify": "^12.0.0",
+    "browserify-shim": "~3.8.12",
+    "connect": "~2.14.3",
+    "gulp": "~3.9.1",
+    "gulp-changed": "~0.3.0",
+    "gulp-compass": "~1.1.8",
+    "gulp-imagemin": "~0.1.5",
+    "gulp-notify": "~1.2.4",
+    "gulp-open": "~0.2.8",
+    "gulp-util": "~2.2.14",
+    "pretty-hrtime": "~0.2.1",
+    "ractivate": "^0.2.0",
+    "vinyl-source-stream": "~0.1.1",
+    "watchify": "~0.10.1"
+  },
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "ractive": "^0.7.3"
+  }
+}

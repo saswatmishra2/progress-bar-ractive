@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en-GB'>
+
+<head>
+    <title>Progress Bars Demo</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/app.css">
+</head>
+
+<body>
+    <img src="images/gulp.png">
+    <div id='maincontainer'></div>
+    <script id='template' type='text/ractive'>
+        <h1>Progress Bars Demo</h1> {{#each progressBars:i}}
+        <div class="barcontainer"> <span id="pbar" style="width:{{barWidth(progressBars[i].width)}}%; background-color:{{barColor(progressBars[i].value)}};">{{progressBars[i].value}}%</span>
+        </div>
+        {{/each}}
+        <div class='controls'>
+            <select id="selection" class="options" value='{{selectedItem}}'>
+                {{#each progressBars:i}}
+                <option value='{{i}}'>{{this.name}}</option>
+                {{/each}}
+            </select>
+            {{#each controlButtons:i}}
+            <button class="btn" on-click='updateProgressBar'>{{this.name}}</button>
+            {{/each}}
+        </div>
+    </script>
+    <script src='http://cdn.ractivejs.org/latest/ractive.min.js'></script>
+    <script src='/bundle.js'></script>
+</body>
+
+</html>
