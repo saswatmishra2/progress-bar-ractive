@@ -1,4 +1,4 @@
-optus-progress-bar-ractive
+progress-bar-ractive
 ==========================
 
 This repository contains ProgressBar Project
